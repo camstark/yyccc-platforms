@@ -5,10 +5,10 @@
 1. Install the [Scattertext](https://github.com/JasonKessler/scattertext) package by Jason Kessler.  
 `$ pip3 install scattertext && python -m spacy download en`
 
-2. Get the candidate profile information from [Calgary Democracy](http://calgarydemocracy.ca/levels/calgary/elections/2017/official-profiles). Or [use the ones I already downloaded]() from there.  
+2. Get the candidate profile information from [Calgary Democracy](http://calgarydemocracy.ca/levels/calgary/elections/2017/official-profiles). Or [use the ones I already downloaded](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-profiles.csv) from there.  
 And read [@yycelect](https://twitter.com/yycelect)/[&grant](https://twitter.com/grant)'s thoughts about The City not making this information available in a reusable, machine-readable format.
 
-3. Clean up the [official-candidate-profiles.csv](google.com) data a bit to prepare for analysis and save as [official-candidate-platforms.csv](google.com):  
+3. Clean up the [official-candidate-profiles.csv](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-profiles.csv) data a bit to prepare for analysis and save as [official-candidate-platforms.csv](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-platforms.csv):  
 `$ python3 datamunge.py`
 
 4. Create the two visualizations of the platform data (incumbents vs. challengers & mayoral candidates vs councillor candidates):  
@@ -20,7 +20,8 @@ And read [@yycelect](https://twitter.com/yycelect)/[&grant](https://twitter.com/
 ~~~
 scattertext --datafile=official-candidate-platforms.csv \
 --text_column=platform --category_column=incumbent --positive_category=incumbent \
---category_display_name=Incumbent --not_category_display_name=Challenger \ --minimum_term_frequency=8 --metadata_column=meta \
+--category_display_name=Incumbent --not_category_display_name=Challenger \
+--minimum_term_frequency=8 --metadata_column=meta \
 --outputfile=incumbent.html
 ~~~
 
