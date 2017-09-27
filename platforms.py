@@ -22,12 +22,12 @@ incumbent = produce_scattertext_explorer(corpus,
                                     metadata=platforms['meta'])
 
 office = CorpusFromPandas(platforms,
-                          category_col='office',
+                          category_col='position',
                           text_col='platform',
                           nlp=nlp).build()
 
 mayor = produce_scattertext_explorer(office,
-                                    category='Mayor',
+                                    category='mayor',
                                     category_name='Mayor',
                                     not_category_name='Councillor',
                                     minimum_term_frequency=8,

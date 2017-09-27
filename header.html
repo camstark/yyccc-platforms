@@ -1,0 +1,68 @@
+<!-- Paste this in between the bottom of the CSS and the top of the scattertext div -->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<div class="text-center" id="title-div">
+  <h4>
+    What terms are used most often in Calgary City Council platforms?
+  </h4>
+
+  <!-- For incumbent focus -->
+  <button type="button" class="btn btn-secondary" disabled>Incumbents vs Challengers</button>
+  <a href="office.html" role="button" class="btn btn-outline-secondary">Mayor vs. Councillor Candidates</a>
+  <!-- For office focus -->
+  <!-- <a href="index.html" role="button" class="btn btn-outline-secondary">Incumbents vs Challengers</a> -->
+  <!-- <button type="button" class="btn btn-secondary" disabled>Mayor vs. Councillor Candidates</button> -->
+  <span id="question" style="color:#868e96" data-toggle="modal"
+        data-target='#explainer'>
+        <!-- class="btn btn-sm btn-outline-secondary btn-circle"> -->
+        <i class="fa fa-question-circle-o"></i>
+  </span>
+  <script>
+  $("#question").hover(function(){
+      $('i').toggleClass('fa-question-circle-o fa-question-circle');
+  });
+  </script>
+  <!-- class="badge badge-pill badge-secondary"> -->
+
+  <!-- <span data-toggle="popover"
+        data-placement="bottom"
+        data-trigger='hover'
+        data-html=true
+        data-content="<h6>City Council Platform Explorer</h6>
+        <p>Explore the words used most often in candidate profiles at <a href='http://www.calgary.ca/election/Pages/meet-the-candidates/default.aspx'>Elections Calgary</a>.</p>
+        <p>Which candidates use which words? What words do incumbents use more than challengers? What do mayoral candidates say more often than council candidates?</p>
+        <p>This analysis relies on a compilation of the profiles in to a dataset at <a href='http://calgarydemocracy.ca/levels/calgary/elections/2017/official-profiles'>Calgary Democracy</a>
+         and a text analysis tool called <a href='https://github.com/JasonKessler/scattertext'>Scattertext</a>.</p>"
+        id='info-button'
+        class="badge badge-pill badge-secondary"><span data-toggle="modal" data-target="#explainer">?</span></span> -->
+</div>
+<!-- The Modal -->
+<div id="explainer" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">City Council Platform Explorer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Explore the words used most often in candidate profiles at <a target=_blank href='http://www.calgary.ca/election/Pages/meet-the-candidates/default.aspx'>Elections Calgary</a>.</p>
+        <p>Which candidates use which words? What words do incumbents use more than challengers? What do mayoral candidates say more often than council candidates?</p>
+        <p>This analysis relies on work by <a target=_blank href='http://calgarydemocracy.ca/levels/calgary/elections/2017/official-profiles'>Calgary Democracy</a> to compile the profiles in to a dataset,
+         and text analysis is done with a tool called <a target=_blank href='https://github.com/JasonKessler/scattertext'>Scattertext</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <p>This page is best viewed on a larger screen, but who am I to tell you what to do.</p>
+        <button type="button" id="gotit" class="btn btn-primary" data-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
