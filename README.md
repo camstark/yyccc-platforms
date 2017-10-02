@@ -6,7 +6,7 @@
 `$ pip3 install scattertext && python -m spacy download en`
 
 2. Get the candidate profile information from [Calgary Democracy](http://calgarydemocracy.ca/levels/calgary/elections/2017/official-profiles). Or [use the ones I already downloaded](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-profiles.csv) from there.  
-And read [@yycelect](https://twitter.com/yycelect)/[&grant](https://twitter.com/grant)'s thoughts about The City not making this information available in a reusable, machine-readable format.
+And read [@yycelect](https://twitter.com/yycelect)/[&grant](https://twitter.com/grant)'s thoughts about The City not making this information available in a reusable, machine-readable format. And the [data extraction code](https://gitlab.com/democracy-tools/dataextractor) on GitLab.
 
 3. Clean up the [official-candidate-profiles.csv](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-profiles.csv) data a bit to prepare for analysis and save as [official-candidate-platforms.csv](https://github.com/camstark/yyccc-platforms/blob/gh-pages/official-candidate-platforms.csv):  
 `$ python3 datamunge.py`

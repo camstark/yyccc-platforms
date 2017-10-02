@@ -199,21 +199,28 @@ color: darkblue;
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77349878-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+  gtag('config', 'UA-77349878-4');
+</script>
 <div class="text-center" id="title-div">
-  <h4>
+  <h3>
     What terms are used most often in Calgary City Council platforms?
-  </h4>
+  </h3>
 
   <!-- For incumbent focus -->
   <!-- <button type="button" class="btn btn-secondary" disabled>Incumbents vs Challengers</button> -->
   <!-- <a href="office.html" role="button" class="btn btn-outline-secondary">Mayor vs. Councillor Candidates</a> -->
   <!-- For office focus -->
-  <a href="index.html" role="button" class="btn btn-outline-secondary">Incumbents vs Challengers</a>
-  <button type="button" class="btn btn-secondary" disabled>Mayor vs. Councillor Candidates</button>
+  <a href="index.html" role="button" class="btn btn-lg btn-outline-secondary">Incumbents vs Challengers</a>
+  <button type="button" class="btn btn-lg btn-secondary" disabled>Mayor vs. Councillor Candidates</button>
   <span id="question" style="color:#868e96" data-toggle="modal"
         data-target='#explainer'>
         <!-- class="btn btn-sm btn-outline-secondary btn-circle"> -->
-        <i class="fa fa-question-circle-o"></i>
+        <i class="fa fa-2x fa-question-circle-o"></i>
   </span>
   <script>
   $("#question").hover(function(){
